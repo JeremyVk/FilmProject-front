@@ -1,0 +1,7 @@
+<nav class="w-full m-auto bg-gray-100 py-10">
+    <ul class="flex space-x-6 justify-center items-center ">
+       <a [routerLink]="['films']" [routerLinkActive]="['active']"><li>Films</li></a>    
+       <a [routerLink]="['mes-films']"  [routerLinkActive]="['active']"><li>Mes films</li></a>       
+       <a (click)="deconnexion()"><li>Déconnexion</li></a>
+    </ul>
+</nav>

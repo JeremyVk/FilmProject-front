@@ -1,0 +1,49 @@
+<h1 class="text-3xl text-center mt-10">Liste des films (Il y a beaucoup d'avengers je sais)</h1>
+<div class="w-full flex items-center justify-center ">
+  <div class="w-3/4 md:w-3/6 my-10">
+    <div
+      *ngFor="let film of films"
+      class="w-full bg-gray-100 py-8 flex flex-col md:flex-row justify-around items-center rounded border-1 border-black my-5"
+    >
+      <div class="w-40">
+        <img
+          src="https://fr.web.img2.acsta.net/pictures/19/04/04/09/04/0472053.jpg"
+          alt=""
+        />
+      </div>
+      <div class="py-8">
+        <ul>
+          <li class="p-2">{{ film.title }}</li>
+          <li class="p-2">Sorti en {{ film.year }}</li>
+          <li class="p-2">Genre: {{ film.gender }}</li>
+        </ul>
+      </div>
+
+      <div>
+        <button class="bg-orange-500 px-8 py-4 mt-1 hover:bg-orange-400 rounded border-black ease-in duration-300 text-white" (click)="addFilmToUser(film.id)">Ajouter</button>
+      </div>
+    </div>
+
+    <!-- <div
+      class="bg-blue-900 py-8 flex flex-col md:flex-row justify-around items-center rounded border-1 border-black my-5"
+    >
+      <div class="w-28">
+        <img
+          src="https://pbs.twimg.com/profile_images/1227195181897854977/Fi6u7gpY_400x400.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <ul>
+          <li class="p-2">le titre</li>
+          <li class="p-2">L'année de parution</li>
+          <li class="p-2">Le genre</li>
+        </ul>
+      </div>
+
+      <div>
+        <button>Ajouter</button>
+      </div>
+    </div>
+  </div> -->
+</div>
